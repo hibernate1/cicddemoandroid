@@ -21,7 +21,7 @@
           - name: Build with gradle
             run: ./gradlew build
           - name: Download a Build Artifact
-            uses: actions/download-artifact@v3.1.3
+            uses: actions/upload-artifact@v3.1.3
             with:
               name: Androidapk.apk
               path: app/build/outputs/apk/app_debug.apk
