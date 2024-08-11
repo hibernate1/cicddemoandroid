@@ -3,7 +3,8 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
 
-    alias(libs.plugins.sonar.kotlin.android)
+
+    id("org.sonarqube") version "4.4.1.3373"
 
 
 }
@@ -12,10 +13,6 @@ sonar {
         property("sonar.projectKey", "hibernate1_cicddemoandroid")
         property("sonar.organization", "hibernate1")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.sources", "src/main/java")
-        property ("sonar.tests", "src/test/java")
-        property ("sonar.java.binaries", "build/classes")
-        property ("sonar.junit.reportPaths", "build/test-results/testDebugUnitTest")
 
     }
 }
