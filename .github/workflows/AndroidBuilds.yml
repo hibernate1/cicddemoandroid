@@ -1,0 +1,24 @@
+
+  name: AndroidBuilds
+  on:
+    pull_request:
+      branches: [master]
+    push:
+      branches: [master]
+  jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v4.1.7
+          - name: Setup Java JDK
+            uses: actions/setup-java@v4.2.2
+            with:
+              java-version: "17"
+              distribution: "adopt"
+          - name: Build with gradle
+            uses: ./gradlew build
+          - name: Download a Build Artifact
+            uses: actions/download-artifact@v4.1.8
+            with:
+              name: Androidapk
