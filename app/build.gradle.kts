@@ -1,7 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.sonar.kotlin.android)
 }
+
+
+
 
 android {
     namespace = "com.reddot.democicd"
