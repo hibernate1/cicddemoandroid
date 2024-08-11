@@ -20,8 +20,8 @@
             run: chmod +x ./gradlew
           - name: Build with gradle
             run: ./gradlew build
-          - name: Download a Build Artifact
+          - name: Upload a Build Artifact
             uses: actions/upload-artifact@v3.1.3
             with:
               name: DemoCICD.apk
-              path: app/build/outputs/apk/debug/app_debug.apk
+              path: app/build/outputs/apk/debug/app-debug.apk
